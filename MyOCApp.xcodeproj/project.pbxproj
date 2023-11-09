@@ -14,6 +14,11 @@
 		3285C7D02AE8FAE000CD623E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3285C7CF2AE8FAE000CD623E /* Assets.xcassets */; };
 		3285C7D32AE8FAE000CD623E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3285C7D12AE8FAE000CD623E /* LaunchScreen.storyboard */; };
 		3285C7D62AE8FAE000CD623E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3285C7D52AE8FAE000CD623E /* main.m */; };
+		3285C7DF2AE8FB3F00CD623E /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3285C7DE2AE8FB3F00CD623E /* HTTPService.m */; };
+		32C5422E2AEA090B0025E925 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C5422D2AEA090B0025E925 /* VideoCell.m */; };
+		32C542322AEA0DD90025E925 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C542312AEA0DD90025E925 /* Video.m */; };
+		32C542362AEA4BE60025E925 /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C542352AEA4BE60025E925 /* VideoVC.m */; };
+		32C542392AEA52890025E925 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C542382AEA52890025E925 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,15 @@
 		3285C7D22AE8FAE000CD623E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3285C7D42AE8FAE000CD623E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3285C7D52AE8FAE000CD623E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3285C7DD2AE8FB3F00CD623E /* HTTPService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPService.h; sourceTree = "<group>"; };
+		3285C7DE2AE8FB3F00CD623E /* HTTPService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPService.m; sourceTree = "<group>"; };
+		32C5422C2AEA090B0025E925 /* VideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		32C5422D2AEA090B0025E925 /* VideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		32C542302AEA0DD90025E925 /* Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		32C542312AEA0DD90025E925 /* Video.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		32C542342AEA4BE60025E925 /* VideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoVC.h; sourceTree = "<group>"; };
+		32C542352AEA4BE60025E925 /* VideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoVC.m; sourceTree = "<group>"; };
+		32C542382AEA52890025E925 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C542392AEA52890025E925 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +62,7 @@
 			children = (
 				3285C7C22AE8FADF00CD623E /* MyOCApp */,
 				3285C7C12AE8FADF00CD623E /* Products */,
+				32C542372AEA52890025E925 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,12 +77,14 @@
 		3285C7C22AE8FADF00CD623E /* MyOCApp */ = {
 			isa = PBXGroup;
 			children = (
+				32C542332AEA4BB50025E925 /* Controller */,
+				32C5422F2AEA0DB90025E925 /* Model */,
+				32C5422B2AEA08E20025E925 /* View */,
+				3285C7DC2AE8FB0F00CD623E /* Services */,
 				3285C7C32AE8FADF00CD623E /* AppDelegate.h */,
 				3285C7C42AE8FADF00CD623E /* AppDelegate.m */,
 				3285C7C62AE8FADF00CD623E /* SceneDelegate.h */,
 				3285C7C72AE8FADF00CD623E /* SceneDelegate.m */,
-				3285C7C92AE8FADF00CD623E /* ViewController.h */,
-				3285C7CA2AE8FADF00CD623E /* ViewController.m */,
 				3285C7CC2AE8FADF00CD623E /* Main.storyboard */,
 				3285C7CF2AE8FAE000CD623E /* Assets.xcassets */,
 				3285C7D12AE8FAE000CD623E /* LaunchScreen.storyboard */,
@@ -74,6 +92,52 @@
 				3285C7D52AE8FAE000CD623E /* main.m */,
 			);
 			path = MyOCApp;
+			sourceTree = "<group>";
+		};
+		3285C7DC2AE8FB0F00CD623E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3285C7DD2AE8FB3F00CD623E /* HTTPService.h */,
+				3285C7DE2AE8FB3F00CD623E /* HTTPService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		32C5422B2AEA08E20025E925 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32C5422C2AEA090B0025E925 /* VideoCell.h */,
+				32C5422D2AEA090B0025E925 /* VideoCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		32C5422F2AEA0DB90025E925 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32C542302AEA0DD90025E925 /* Video.h */,
+				32C542312AEA0DD90025E925 /* Video.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		32C542332AEA4BB50025E925 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3285C7C92AE8FADF00CD623E /* ViewController.h */,
+				3285C7CA2AE8FADF00CD623E /* ViewController.m */,
+				32C542342AEA4BE60025E925 /* VideoVC.h */,
+				32C542352AEA4BE60025E925 /* VideoVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		32C542372AEA52890025E925 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32C542382AEA52890025E925 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +211,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3285C7CB2AE8FADF00CD623E /* ViewController.m in Sources */,
+				32C5422E2AEA090B0025E925 /* VideoCell.m in Sources */,
+				3285C7DF2AE8FB3F00CD623E /* HTTPService.m in Sources */,
 				3285C7C52AE8FADF00CD623E /* AppDelegate.m in Sources */,
+				32C542362AEA4BE60025E925 /* VideoVC.m in Sources */,
 				3285C7D62AE8FAE000CD623E /* main.m in Sources */,
 				3285C7C82AE8FADF00CD623E /* SceneDelegate.m in Sources */,
+				32C542322AEA0DD90025E925 /* Video.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
